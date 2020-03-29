@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/log_reg.css">
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body id="register_bd">
+    <img id="bg" width="100%" src="/static/imgs/banner2.jpg" alt="">
+    <div id="register_form">
+
+        <div id="register">
+            <h3>请创建一个新账号</h3>
+            <hr>
+            {% csrf_token %}
+            <div class="con">
+                <span class="lab">用户名</span>
+                <input class="txt" type="text" placeholder="请输入用户名" id="uname" name="uname">
+            </div>
+            <div class="con">
+                <span class="lab">手机号</span>
+                <input class="txt" type="text" placeholder="请输入手机号" id="uphone" name="uphone">
+            </div>
+            <div class="con">
+                <span class="lab">邮箱</span>
+                <input class="txt" type="text" placeholder="请输入邮箱" id="uemail" name="uemail">
+            </div>
+            <div class="con">
+                <span class="lab">密码</span>
+                <input class="txt" type="password" placeholder="请输入密码" id="upwd_one" name="upwd_one">
+            </div>
+            <div class="con">
+                <span class="lab">密码</span>
+                <input class="txt" type="password" placeholder="请再次输入密码" id="upwd_two" name="upwd_two">
+            </div>
+            <div class="sub">
+                <button class="btn" id="sub_register">注册</button>
+                <button class="btn" id="sub_login">登录</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#sub_register").click(function(){
+                var params = {
+                    "uname":$("#uname").val(),
+                    "upwd_one":$("#upwd_one").val(),
+                    "upwd_two":$("#upwd_two").val(),
+                    "uphone":$("#uphone").val(),
+                    "uemail":$("#uemail").val(),
+                    "csrfmiddlewaretoken":$("[name=csrfmiddlewaretoken]").val(),
+                }
+                $.post(url="/index/register",data=params,callback=function(res){
+                    alert(res.info)
+                },type="json")
+            })
+            $("#sub_login").click(function () {
+                window.location.href = "/index/login"
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+/* 通用效果 */
+h3,
+ul,
+p,
+table,
+body,
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+}
+/* 公用样式 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.cb {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 登录页面的样式 */
+#bg {
+    position: fixed;
+    opacity: 0.3;
+}
+
+div .sub {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    /*background-color: yellow;*/
+}
+
+div .con .lab{
+    display: inline-block;
+    width:60px;
+    padding: 4px 5px;
+    text-align: right;
+    /*background: red;*/
+}
+
+div .con{
+    width:520px;
+    text-align: center;
+    /*background-color: yellow;*/
+}
+
+#register {
+    width: 520px;
+    height: 460px;
+    border: solid 0px red;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    left: 50%;
+    top: 0%;
+    margin-left: -240px;
+}
+
+#register h3 {
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0;
+}
+
+#register div:first-child {
+    margin-top: 30px;
+}
+
+#register div {
+    margin: 15px 0;
+}
+
+#register form {
+    margin-left: 30px;
+}
+
+#register .txt {
+    width: 300px;
+    padding: 8px 10px;
+    border: solid 1px #ccc;
+}
+
+#register .btn {
+    padding: 10px 19px;
+    border-radius: 6px;
+    border: solid 1px #555;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+#register .anchor {
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 6px;
+    border: solid 1px #555;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#register .btn:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+#login {
+    width: 520px;
+    height: 335px;
+    border: solid 0px red;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    left: 50%;
+    top: 8%;
+    margin-left: -240px;
+}
+
+#login .anchor {
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 6px;
+    border: solid 1px #555;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#login h3 {
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0;
+}
+
+#login div:first-child {
+    margin-top: 30px;
+}
+
+#login div {
+    margin: 20px 0;
+}
+
+#login form {
+    margin-left: 30px;
+}
+
+#login .txt {
+    width: 300px;
+    padding: 8px 10px;
+    /*background-color: blue;*/
+    border: solid 1px #ccc;
+}
+
+#login .btn {
+    padding: 10px 19px;
+    border-radius: 6px;
+    border: solid 1px #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#login .btn:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+
